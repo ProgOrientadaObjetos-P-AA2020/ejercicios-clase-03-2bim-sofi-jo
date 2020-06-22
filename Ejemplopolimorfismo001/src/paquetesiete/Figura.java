@@ -9,6 +9,28 @@ package paquetesiete;
  *
  * @author reroes
  */
-public class Figura {
-    
+public abstract class Figura {
+
+    protected String caracteristicas;
+    protected double area;
+
+    public void establecerCaracteristicas(String c) {
+        caracteristicas = c;
+    }
+
+    public abstract void calcular_Area();
+
+    public String obtenerCaracteristicas() {
+        return caracteristicas;
+    }
+
+    public double obtenerArea() {
+        return area;
+    }
+
+    @Override
+    public String toString() {
+        String cadena = String.format("Figura: %s\n", caracteristicas);
+        return cadena;
+    }
 }

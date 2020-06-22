@@ -31,6 +31,9 @@ public class Ejecutor {
         
         // inicio de la solución
         ArrayList<Figura> figuras = new ArrayList<>();
+        Cuadrado c = new Cuadrado();
+        c.establecerCaracteristicas("Cuadrado");
+        c.establecerLado(10);
         
         
         

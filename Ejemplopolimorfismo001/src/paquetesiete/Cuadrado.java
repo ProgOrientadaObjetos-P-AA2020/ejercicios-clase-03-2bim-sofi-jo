@@ -9,6 +9,29 @@ package paquetesiete;
  *
  * @author reroes
  */
-public class Cuadrado {
-       
+public class Cuadrado extends Figura {
+
+    double lado;
+    
+
+    public void establecerLado(double l) {
+        lado = l;
+    }
+
+    @Override
+    public void calcular_Area() {
+        area = lado * lado;
+    }
+
+    public double obtenerLado() {
+        return lado;
+    }
+
+    @Override
+    public String toString() {
+
+        String cadena = String.format("Figura : %s\nLado: %.2f\nArea: %.2f\n",
+                obtenerCaracteristicas(), obtenerLado(), obtenerArea());
+        return cadena;
+    }
 }
