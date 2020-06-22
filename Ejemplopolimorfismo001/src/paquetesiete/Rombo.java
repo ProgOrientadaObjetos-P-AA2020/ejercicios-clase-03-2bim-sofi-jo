@@ -14,11 +14,11 @@ public class Rombo extends Figura {
     double diagonal_mayor;
     double diagonal_menor;
 
-    public void establecerDiagonalMayor(int b) {
+    public void establecerDiagonalMayor(double b) {
         diagonal_mayor = b;
     }
 
-    public void establecerDiagonalMenor(int a) {
+    public void establecerDiagonalMenor(double a) {
         diagonal_menor = a;
     }
 
@@ -38,9 +38,11 @@ public class Rombo extends Figura {
     @Override
     public String toString() {
 
-        String cadena = String.format("Figura : %s\nBase: %.2f\nAltura: %.2f\n"
-                + "Area: %.2f\n", obtenerCaracteristicas(),
-                obtenerDiagonalMayor(), obtenerDiagonalMenor(),
+        String cadena = String.format("Caracteristica: %s\nDiagonal Mayor: "
+                + "%.2f\nDiagonal Menor: %.2f\nArea: %.2f\n", 
+                obtenerCaracteristicas(),
+                obtenerDiagonalMayor(), 
+                obtenerDiagonalMenor(),
                 obtenerArea());
         return cadena;
     }

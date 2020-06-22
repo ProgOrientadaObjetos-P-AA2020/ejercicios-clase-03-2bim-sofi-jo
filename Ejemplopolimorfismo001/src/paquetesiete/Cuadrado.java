@@ -30,7 +30,7 @@ public class Cuadrado extends Figura {
     @Override
     public String toString() {
 
-        String cadena = String.format("Figura : %s\nLado: %.2f\nArea: %.2f\n",
+        String cadena = String.format("Caracteristica : %s\nLado: %.2f\nArea: %.2f\n",
                 obtenerCaracteristicas(), obtenerLado(), obtenerArea());
         return cadena;
     }

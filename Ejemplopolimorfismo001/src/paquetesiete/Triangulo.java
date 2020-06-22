@@ -14,11 +14,11 @@ public class Triangulo extends Figura {
     double base;
     double altura;
 
-    public void establecerBase(int b) {
+    public void establecerBase(double b) {
         base = b;
     }
 
-    public void establecerAltura(int a) {
+    public void establecerAltura(double a) {
         altura = a;
     }
 
@@ -38,7 +38,7 @@ public class Triangulo extends Figura {
     @Override
     public String toString() {
 
-        String cadena = String.format("Figura : %s\nBase: %.2f\nAltura: %.2f\n"
+        String cadena = String.format("Caracteristica : %s\nBase: %.2f\nAltura: %.2f\n"
                 + "Area: %.2f\n", obtenerCaracteristicas(), obtenerBase(),
                 obtenerAltura(), obtenerArea());
         return cadena;
