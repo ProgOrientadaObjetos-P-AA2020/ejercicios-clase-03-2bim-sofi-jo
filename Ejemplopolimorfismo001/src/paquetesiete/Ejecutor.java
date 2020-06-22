@@ -6,6 +6,7 @@
 package paquetesiete;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -32,72 +33,48 @@ public class Ejecutor {
 
         // inicio de la solución
         ArrayList<Figura> figuras = new ArrayList<>();
-        Cuadrado c = new Cuadrado();
-        Cuadrado c2 = new Cuadrado();
-        Cuadrado c3 = new Cuadrado();
-        Cuadrado c4 = new Cuadrado();
-
-        c.establecerCaracteristicas("Cuadrado");
-        c.establecerLado(10);
-        c2.establecerCaracteristicas("Cuadrado");
-        c2.establecerLado(3);
-        c3.establecerCaracteristicas("Cuadrado");
-        c3.establecerLado(7.5);
-        c4.establecerCaracteristicas("Cuadrado");
-        c4.establecerLado(23);
-
-        figuras.add(c);
-        figuras.add(c2);
-        figuras.add(c3);
-        figuras.add(c4);
-
-        Rombo r = new Rombo();
-        Rombo r2 = new Rombo();
-        Rombo r3 = new Rombo();
-
-        r.establecerCaracteristicas("Rombo");
-        r2.establecerCaracteristicas("Rombo");
-        r3.establecerCaracteristicas("Rombo");
-
-        r.establecerDiagonalMayor(10);
-        r.establecerDiagonalMenor(8);
-        r2.establecerDiagonalMayor(16);
-        r2.establecerDiagonalMenor(5);
-        r3.establecerDiagonalMayor(22);
-        r3.establecerDiagonalMenor(7);
-
-        figuras.add(r);
-        figuras.add(r2);
-        figuras.add(r3);
-
-        Triangulo t = new Triangulo();
-        Triangulo t2 = new Triangulo();
-        Triangulo t3 = new Triangulo();
-        Triangulo t4 = new Triangulo();
-        Triangulo t5 = new Triangulo();
-
-        t.establecerCaracteristicas("Triangulo");
-        t2.establecerCaracteristicas("Triangulo");
-        t3.establecerCaracteristicas("Triangulo");
-        t4.establecerCaracteristicas("Triangulo");
-        t5.establecerCaracteristicas("Triangulo");
-
-        t.establecerBase(6);
-        t.establecerAltura(7);
-        t2.establecerBase(3);
-        t2.establecerAltura(9);
-        t3.establecerBase(12);
-        t3.establecerAltura(5);
-        t4.establecerBase(11);
-        t4.establecerAltura(9);
-        t5.establecerBase(8.3);
-        t5.establecerAltura(5.6);
-
-        figuras.add(t);
-        figuras.add(t2);
-        figuras.add(t3);
-        figuras.add(t4);
-        figuras.add(t5);
+        Scanner so = new Scanner(System.in);
+        double lado;
+        double diagM;
+        double diagMen;
+        double base;
+        double altura;
+        
+        System.out.println("Cuadrado");
+        for (int i = 0; i < 4; i++) {
+            Cuadrado c = new Cuadrado();
+            System.out.println("Ingrese el lado del cuadrado");
+            lado = so.nextDouble();
+            c.establecerCaracteristicas("Cuadrado");
+            c.establecerLado(lado);
+            figuras.add(c);
+        }
+        System.out.println("Rombo");
+        for (int i = 0; i < 3; i++) {
+            Rombo r = new Rombo();
+            System.out.println("Ingrese el tamaño de la diagonal mayor");
+            diagM = so.nextDouble();
+            System.out.println("Ingrese el tamaño de la diagonal menor");
+            diagMen = so.nextDouble();
+            
+            r.establecerCaracteristicas("Rombo");
+            r.establecerDiagonalMayor(diagM);
+            r.establecerDiagonalMenor(diagMen);
+            figuras.add(r);
+        }
+        System.out.println("Triangulo");
+        for (int i = 0; i < 5; i++) {
+            Triangulo t = new Triangulo();
+            System.out.println("Ingrese la base del triangulo");
+            base = so.nextDouble();
+            System.out.println("Ingrese el altura del triangulo");
+            altura = so.nextDouble();
+            t.establecerCaracteristicas("Triangulo");
+            
+            t.establecerBase(base);
+            t.establecerAltura(base);
+            figuras.add(t);
+        }
         // proceso para comprobar el polimorfismo
         for (int i = 0; i < figuras.size(); i++) {
             // 1.  

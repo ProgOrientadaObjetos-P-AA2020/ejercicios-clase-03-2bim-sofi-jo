@@ -39,9 +39,9 @@ public class Rombo extends Figura {
     public String toString() {
 
         String cadena = String.format("Caracteristica: %s\nDiagonal Mayor: "
-                + "%.2f\nDiagonal Menor: %.2f\nArea: %.2f\n", 
+                + "%.2f\nDiagonal Menor: %.2f\nArea: %.2f\n",
                 obtenerCaracteristicas(),
-                obtenerDiagonalMayor(), 
+                obtenerDiagonalMayor(),
                 obtenerDiagonalMenor(),
                 obtenerArea());
         return cadena;
