@@ -53,12 +53,8 @@ public class EjecutaEstudiante {
                     apellidosEst, numeroCreds, costoCred);
             // se hace uso de los métodos establecer para asignar valores
             // a los datos (atributos) del objeto
-            estudianteP.establecerNombresEstudiante(nombresEst);
-            estudianteP.establecerApellidoEstudiante(apellidosEst);
             estudianteP.establecerIdentificacionEstudiante(identificacionEst);
             estudianteP.establecerEdadEstudiante(edadEst);
-            estudianteP.establecerNumeroCreditos(numeroCreds);
-            estudianteP.establecerCostoCredito(costoCred);
             // Se agrega al arrayList estudiantes un objeto de tipo
             // EstudiantePresencial
             estudiantes.add(estudianteP);
@@ -91,13 +87,8 @@ public class EjecutaEstudiante {
                     , costoAsig, nombresEst, apellidosEst);
             // se hace uso de los métodos establecer para asignar valores
             // a los datos (atributos) del objeto
-            estudianteD.establecerNombresEstudiante(nombresEst);
-            estudianteD.establecerApellidoEstudiante(apellidosEst);
             estudianteD.establecerIdentificacionEstudiante(identificacionEst);
             estudianteD.establecerEdadEstudiante(edadEst);
-            estudianteD.establecerNumeroAsginaturas(numeroAsigs);
-            estudianteD.establecerCostoAsignatura(costoAsig);
-
             // Se agrega al arrayList estudiantes un objeto de tipo
             // EstudianteDistancia
             estudiantes.add(estudianteD);
